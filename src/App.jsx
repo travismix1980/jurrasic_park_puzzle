@@ -1,21 +1,31 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Timer from './components/timer/Timer';
 import Restarter from './components/restarter/Restarter';
 
 const App = () => {
-	const [reset, setReset] = useState('no');
+	const [
+		reset,
+		setReset,
+	] = useState('no');
 
 	const renderContent = () => {
 		if (reset === 'no') {
-			return <div><Restarter setReset={setReset} /></div>;
+			return (
+				<div>
+					<Restarter setReset={setReset} />
+				</div>
+			);
 		} else {
-			return <div><Timer /></div>;
+			return (
+				<div>
+					<Timer />
+				</div>
+			);
 		}
-	}
+	};
 
 	return (
-		<div>
-			{/* <Restarter setReset={setReset} /> */}
+		<div className="ui container">
 			{renderContent()}
 		</div>
 	);
