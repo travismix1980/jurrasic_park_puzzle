@@ -1,9 +1,12 @@
 import React from 'react';
 
 const Timer = () => {
+	const passcode = 1234;
+
 	return (
 		<div>
-			<h1>Timer here</h1>
+			<h2>If you don't hurry the dino's will escape</h2>
+			
 		</div>
 	);
 };
