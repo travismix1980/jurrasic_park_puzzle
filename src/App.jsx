@@ -18,7 +18,7 @@ const App = () => {
 		} else {
 			return (
 				<div>
-					<Timer />
+					<Timer initialMinute={30}/>
 				</div>
 			);
 		}
