@@ -4,6 +4,7 @@ import './timer.css';
 
 const Timer = (props) => {
 	const { initialMinute = 0, initialSeconds = 0 } = props;
+	const passcode = '1228';
 
 	const [
 		minutes,
@@ -53,7 +54,16 @@ const Timer = (props) => {
 	);
 
 	const renderDetails = () => {
-		if (locked === 'no') {
+		if (failed) {
+			return (
+				<div>
+					<h1 className="timer">
+						{minutes}:{seconds < 10 ? `0${seconds}` : seconds}
+					</h1>
+					<h1 className="timer-failed">You have failed and been eaten by the dinosaurs</h1>
+				</div>
+			);
+		} else if (locked === 'no') {
 			return (
 				<div>
 					{minutes === 0 && seconds === 0 ? (
@@ -63,22 +73,13 @@ const Timer = (props) => {
 							{minutes}:{seconds < 10 ? `0${seconds}` : seconds}
 						</h1>
 					)}
-					<Passcode setLocked={setLocked} />
+					<Passcode pass="" setLocked={setLocked} />
 				</div>
 			);
 		} else if (locked === 'yes') {
 			return (
 				<div>
-					<Passcode pass={'1228'} setLocked={setLocked} />
-				</div>
-			);
-		} else if (failed) {
-			return (
-				<div>
-					<h1 className="timer">
-						{minutes}:{seconds < 10 ? `0${seconds}` : seconds}
-					</h1>
-					<h1 className="timer-failed">You have failed and been eaten by the dinosaurs</h1>
+					<Passcode pass={passcode} setLocked={setLocked} />
 				</div>
 			);
 		}

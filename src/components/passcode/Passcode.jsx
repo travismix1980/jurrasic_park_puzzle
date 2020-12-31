@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './passcode.css';
 
-const Passcode = ({setLocked,pass}) => {
+const Passcode = ({setLocked, pass}) => {
 	const [
 		passval,
 		setPassVal,

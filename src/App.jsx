@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Timer from './components/timer/Timer';
-import Restarter from './components/restarter/Restarter';
+import Reseter from './components/reseter/Reseter';
 
 const App = () => {
 	const [
@@ -12,7 +12,7 @@ const App = () => {
 		if (reset === 'no') {
 			return (
 				<div>
-					<Restarter setReset={setReset} />
+					<Reseter setReset={setReset} />
 				</div>
 			);
 		} else {

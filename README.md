@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# Jurrasic Park Puzzle
+This is a small program written for my sons 11th birthday party.  We turned the house into an escape room for him and his friends to get through made of his favorite things and this was to mimic the first jurrasic park movie where they needed to reset the power to get the dinosaurs locked back up.  You can change the timer by minutes or seconds by passing integer values to the timer component inside of the App.jsx file.  
+
+You pass the values of minutes and seconds by using initialMinute or initialSeconds props.  Both props have default values of 0 so you in most cases only need to set initialMinute and can skip initialMinutes.  There are both success and failure messages based on if the right 4 digit code is entered in time or not.  passcode needs to be set at the top of both the Timer.jsx component and the Passcode.jsx component though this should probably be made a prop to simplify it in both locations.  
+
+I left the passcode as not props simply because in the small amount of time I had to complete this in time for his party I didnt have the time and for some reason it was easier for me to work with it the way it is currently.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

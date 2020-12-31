@@ -1,7 +1,7 @@
 import React from 'react';
-import './restarter.css';
+import './reseter.css';
 
-const Restarter = ({setReset}) => {
+const Reseter = ({setReset}) => {
 	
 
 	return (
@@ -16,4 +16,4 @@ const Restarter = ({setReset}) => {
 	);
 };
 
-export default Restarter;
+export default Reseter;
